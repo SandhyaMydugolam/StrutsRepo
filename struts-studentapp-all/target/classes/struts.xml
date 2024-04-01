@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+	"http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+	<package name="student-app" extends="struts-default">
+		<action name="studform"
+			class="com.struts.actions.StudentAction" method="showStudForm">
+			<result name="none">/WEB-INF/content/studform.jsp</result>
+		</action>
+		<action name="register"
+			class="com.struts.actions.StudentAction" method="execute">
+			<result name="success">/WEB-INF/content/studsuccess.jsp</result>
+			<result name="error">/WEB-INF/content/studform.jsp</result>
+			<result name="input">/WEB-INF/content/studform.jsp</result>
+		</action>
+
+	</package>
+
+</struts>
